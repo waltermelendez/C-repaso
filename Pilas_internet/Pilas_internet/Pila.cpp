@@ -13,7 +13,7 @@ Pila::~Pila() {//destructor
 }
 //verifica si la fila esta vacia
 bool Pila::EstaVacia() {
-	return topePtr = NULL;
+	return topePtr == NULL;
 }
 void Pila::mete(int valor) {//mete un dato en la fila
 	Nodo* nuevoPtr = new Nodo();
@@ -27,6 +27,7 @@ int Pila::saca() {//saca un elemento de la pila, simepre inicio
 	}
 	int x = topePtr->dato;//guarda el dato en el tope
 	Nodo* tempPtr = topePtr;//guarda el nodo a sacar 
+	topePtr = topePtr->siguientePtr;
 	delete tempPtr;//libera
 	return x;//regresa el dato sacado
 }
@@ -61,7 +62,7 @@ void Pila::muestra() {//muestra los datos
 		aux.mete(x);//guarda el dato en la parte 
 	}
 	mueve(aux);
-	cout << "\n";
+	cout << "NULL\n";
 	system("pause");
 }
 int Pila::cantidadElementos() {
