@@ -17,35 +17,40 @@ void menu() {
 }
 int main()
 {
-    int opcion;//opcion menu
-    int valor;//valor de nodo
-    Lista    listaEnteros;//Objeto lista
-    system("color 1F");
-    do {
-        menu();
-        cin >> opcion;
-        switch (opcion)
-        {
-        case 1:
-            cout << "Ingrese un valor de entero\n";
-            cin >> valor;
-            listaEnteros.InsertaralInicio(valor);
-            listaEnteros.RecorrerIterativo();
+    //int opcion;//opcion menu
+    //int valor;//valor de nodo
+    //Lista    listaEnteros;//Objeto lista
+    //system("color 1F");
+    //do {
+    //    menu();
+    //    cin >> opcion;
+    //    switch (opcion)
+    //    {
+    //    case 1:
+    //        cout << "Ingrese un valor de entero\n";
+    //        cin >> valor;
+    //        listaEnteros.InsertaralInicio(valor);
+    //        listaEnteros.RecorrerIterativo();
 
-            break;
-        case 2:
-            listaEnteros.RecorrerIterativo();
-            break;
-        default:
-            opcion = 3;
-            break;
-        }
-    } while (opcion!=3);
-    listaEnteros.eliminarprimero();
-    listaEnteros.llamadoRecorridoRecursivo();
-    listaEnteros.insertaralFinal(12);
-    listaEnteros.insertarAntes(4,3);
-    listaEnteros.insertarDespues(1, 6);
+    //        break;
+    //    case 2:
+    //        listaEnteros.RecorrerIterativo();
+    //        break;
+    //    default:
+    //        opcion = 3;
+    //        break;
+    //    }
+    //} while (opcion!=3);
+    //listaEnteros.eliminarprimero();
+    //listaEnteros.llamadoRecorridoRecursivo();
+    //listaEnteros.insertaralFinal(12);
+    //listaEnteros.insertarAntes(4,3);
+    //listaEnteros.insertarDespues(1, 6);
+    Lista my_;
+    my_.InsertaralInicio(12);
+    my_.InsertaralInicio(122);
+    my_.InsertaralInicio(900);
+    my_.RecorrerIterativo();
     return 0;
 
 }
